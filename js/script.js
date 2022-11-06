@@ -2,9 +2,15 @@ const fetchPokemon = async (pokemon) => {
 
     const  apiResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
 
-    const data = await apiResponse.json()
+    const data = await apiResponse.json();
     
-    console.log(apiResponse);
+    return data;
 }
 
-fetchPokemon('25');
+const renderPokemon = async (pokemon) => {
+    const data = await fetchPokemon(pokemon);
+
+
+}
+
+renderPokemon('25');
